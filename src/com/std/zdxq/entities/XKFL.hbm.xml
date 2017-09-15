@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-17 20:24:52 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.std.zdxq.entities.XKFL" table="SSH_XKFL">
+        <id name="xk_id" type="int">
+            <column name="XK_ID" />
+            <generator class="native" />
+        </id>
+        <property name="xk_code1" type="java.lang.String">
+            <column name="XK_CODE1" />
+        </property>
+        <property name="xk_code2" type="java.lang.String">
+            <column name="XK_CODE2" />
+        </property>
+        <property name="xk_code3" type="java.lang.String">
+            <column name="XK_CODE3" />
+        </property>
+        <property name="xk_title" type="java.lang.String">
+            <column name="XK_TITLE" />
+        </property>
+    </class>
+</hibernate-mapping>

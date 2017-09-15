@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-8 15:31:17 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.std.zdxq.entities.User" table="SSH_USER">
+        <id name="u_id" type="java.lang.Integer">
+            <column name="U_ID" />
+            <generator class="native" />
+        </id>
+        <property name="u_name" type="java.lang.String">
+            <column name="U_NAME" />
+        </property>
+        <property name="u_pass" type="java.lang.String">
+            <column name="U_PASS" />
+        </property>
+        <property name="u_addr" type="java.lang.String">
+            <column name="U_ADDR" />
+        </property>
+        <property name="u_netaddr" type="java.lang.String">
+            <column name="U_NETADDR" />
+        </property>
+        <property name="u_email" type="java.lang.String">
+            <column name="U_EMAIL" />
+        </property>
+        <property name="u_fname" type="java.lang.String">
+            <column name="U_FNAME" />
+        </property>
+        <property name="u_postcode" type="java.lang.String">
+            <column name="U_POSTCODE" />
+        </property>
+        <property name="u_linkman" type="java.lang.String">
+            <column name="U_LINKMAN" />
+        </property>
+        <property name="u_telephone" type="java.lang.String">
+            <column name="U_TELEPHONE" />
+        </property>
+        <property name="u_phone" type="java.lang.String">
+            <column name="U_PHONE" />
+        </property>
+        <property name="u_fax" type="java.lang.String">
+            <column name="U_FAX" />
+        </property>
+        <property name="u_otype" type="java.lang.String">
+            <column name="U_OTYPE" />
+        </property>
+        <property name="u_introduce" type="java.lang.String">
+            <column name="U_INTRODUCE" />
+        </property>
+        <many-to-one name="identity" class="com.std.zdxq.entities.Identity" fetch="join" lazy="false">
+            <column name="IDENTITY_ID" />
+        </many-to-one>
+        <many-to-one name="dept" class="com.std.zdxq.entities.Dept" fetch="join" lazy="false" >
+            <column name="DEPT_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

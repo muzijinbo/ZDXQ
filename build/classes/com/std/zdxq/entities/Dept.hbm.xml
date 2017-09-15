@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-17 20:04:24 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.std.zdxq.entities.Dept" table="SSH_DEPT">
+        <id name="d_id" type="java.lang.Integer">
+            <column name="D_ID" />
+            <generator class="native" />
+        </id>
+        <property name="d_name" type="java.lang.String">
+            <column name="D_NAME" />
+        </property>
+    </class>
+</hibernate-mapping>

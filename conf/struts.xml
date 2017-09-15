@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!--  Overwrite Convention -->
+   
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+
+
+    <package name="default" namespace="/" extends="struts-default">
+		
+		<interceptors>
+			<interceptor-stack name="sshStack">
+				<interceptor-ref name="paramsPrepareParamsStack">
+					<param name="prepare.alwaysInvokePrepare">false</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="sshStack"></default-interceptor-ref>
+		
+		<action name="user-*" class="userAction" 
+			method="{1}">
+			 <result name="list">user-list.jsp</result>	
+			 
+			 <result name="input">register.jsp</result>
+			
+			 <result name="success" type="redirect">loginPage/loginJ.jsp</result>
+			 <result name="Ajax-success" type="stream" >
+		        <param name="contentType">text/html</param>
+		        <param name="inputName">inputStream</param>
+		    </result>
+		</action>
+		<action name="user-check" class="userAction" method="check">
+			<result name="login">loginJ.jsp</result>
+			 <result name="index">Index2user.jsp</result>
+		</action>
+		<action name="user-checkName" class="userAction" method="checkName">
+			<result name="Ajax-success" type="stream">
+				<param name="contentType">text/html</param>
+		        <param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="user-showUser" class="userAction" method="showUser">
+			<result name="Ajax-success" type="stream">
+				<param name="contentType">text/html</param>
+		        <param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="user-getIdentity" class="userAction" 
+			method="getIdentity">
+		</action>
+		<action name="need-input" class="needAction"
+			method="input">
+			<result name="input">/apply/apply.jsp</result>
+		</action>
+		
+		<action name="tree-getNodes" class="treeAction" 
+			method="getNodes">
+			<result name="success">tree-getNodes</result>	
+		</action>
+		<action name="need-list" class="needAction"
+			method="list">
+			<!-- <result name="list">/list/listUser.jsp</result>	 -->
+		</action>
+		<action name="identity-list" class="identityAction" 
+			method="list">
+			 <result name="list">identity-list.jsp</result>
+		</action> 
+		<action name="identity-input" class="identityAction" 
+			method="input">
+			 <result name="input" >addIdentity.jsp</result>
+		</action> 
+		<action name="identity-save" class="identityAction" 
+			method="save">
+			 <result name="success"  type="redirect">identity-list</result>
+		</action>     
+		<action name="identity-delete" class="identityAction" 
+			method="delete">
+			 <result name="deleteSuccess" type="redirect">identity-list</result>
+		</action>
+		
+    </package>
+</struts>

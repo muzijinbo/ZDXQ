@@ -1,0 +1,39 @@
+
+table {
+
+	border-collapse: collapse;
+	border: none;
+	margin: 0px auto;
+	width: 900px;
+}
+   body{
+	
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    }
+
+th, td {
+
+	border: solid #333 1px;
+	width:200px;
+	font-weight:900;
+	font-size:medium;
+	font-family: '汉仪大隶书繁';
+}
+
+.sec {
+	
+	border:0;
+	font-weight:500;
+	font-size:medium;
+	 font-family: 'Microsoft YaHei';
+}
+.server {
+    border: 1px solid #ccc;
+}
+div {
+	
+	text-align: center;
+	font-weight:900;
+	font-family: '汉仪大隶书繁';
+}

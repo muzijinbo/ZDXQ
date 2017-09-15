@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-17 20:24:52 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.std.zdxq.entities.Identity" table="SSH_IDENTITY">
+        <id name="i_id" type="java.lang.Integer">
+            <column name="I_ID" />
+            <generator class="native" />
+        </id>
+        <property name="i_name" type="java.lang.String">
+            <column name="I_NAME" />
+        </property>
+        <property name="limitofadd" type="boolean">
+            <column name="LIMITOFADD" />
+        </property>
+        <property name="limitofedit" type="boolean">
+            <column name="LIMITOFEDIT" />
+        </property>
+        <property name="limitofdelete" type="boolean">
+            <column name="LIMITOFDELETE" />
+        </property>
+        <property name="limitofaudit1" type="boolean">
+            <column name="LIMITOFAUDIT1" />
+        </property>
+        <property name="limitofaudit2" type="boolean">
+            <column name="LIMITOFAUDIT2" />
+        </property>
+        <property name="limitofcheckall" type="boolean">
+            <column name="LIMITOFCHECKALL" />
+        </property>
+    </class>
+</hibernate-mapping>

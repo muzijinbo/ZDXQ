@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="userDao" class="com.std.zdxq.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="deptDao" class="com.std.zdxq.dao.DeptDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userService" class="com.std.zdxq.services.UserService">
+		<property name="userdao" ref="userDao"></property>
+	</bean>
+	<bean id="deptservice" class="com.std.zdxq.services.DeptService">
+		<property name="deptDao" ref="deptDao"></property>
+	</bean>
+	
+	<bean id="userAction" class="com.std.zdxq.action.UserAction" 
+		scope="prototype" >
+		<property name="userService" ref="userService"></property>
+		<property name="deptService" ref="deptservice"></property>
+	</bean>
+	
+	<bean id="needDao" class="com.std.zdxq.dao.NeedDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="needService" class="com.std.zdxq.services.NeedService">
+		<property name="needDao" ref="needDao"></property>
+	</bean>
+	<bean id="needAction" class="com.std.zdxq.action.NeedAction">
+		<property name="needService" ref="needService"></property>
+		<property name="userService" ref="userService"></property>
+		
+	</bean>
+	
+	<bean name="identityDao" class="com.std.zdxq.dao.IdentityDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean name="identityService" class="com.std.zdxq.services.IdentityService">
+		<property name="identityDao" ref="identityDao"></property>
+	</bean>
+	<bean name="identityAction" class="com.std.zdxq.action.IdentityAction">
+		<property name="identityService" ref="identityService"></property>
+	</bean>
+	
+	<bean id="xkflDao" class="com.std.zdxq.dao.XKFLDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="xkflService" class="com.std.zdxq.services.XKFLService">
+		<property name="xkflDao" ref="xkflDao"></property>
+	</bean>
+	<bean id="treeAction" class="com.std.zdxq.action.TreeAction">
+		<property name="xkflService" ref="xkflService"></property>
+	</bean>
+	
+</beans>

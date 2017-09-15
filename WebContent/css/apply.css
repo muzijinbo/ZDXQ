@@ -1,0 +1,80 @@
+﻿p, h1, h2, h3, h4, h5, h6, div {
+    margin: 0;
+    padding: 0;
+}
+
+
+ body {
+   font-family: 'Microsoft YaHei';
+}
+table{
+   border-collapse:collapse;
+}
+.head {
+    font-weight:bold;
+}
+.table tr td{
+    border:1px solid #ccc;
+    height:30px;
+    vertical-align:middle;
+}
+.first{
+    width:150px;
+    text-align:right;
+}
+.input{
+    width:220px;
+   
+}
+input{
+    width:182px;
+    border:0;
+    height:20px;
+}
+.R{
+    width:50px;
+    border:0;
+    height:20px;
+}
+.addr{
+    width:508px;
+}
+.TextLang{
+    width:834px;
+    
+}
+.TextKey{
+    width:150px;
+     border:1px solid #ccc;
+}
+.secend{
+    height:60px;
+}
+.Fxing{
+	width:100px;
+    text-align:right;
+    color:red;
+}
+.xing{
+	color:red;
+}
+.server {
+    border: 1px solid #ccc;
+}
+
+.apply_title {
+    padding: 10px 0;
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 20px;
+    text-align:center;
+ }
+select {
+   width: 186px;
+}
+.apply_range,.apply_proaddr,.apply_counaddr{
+   width: 100px;
+}
+

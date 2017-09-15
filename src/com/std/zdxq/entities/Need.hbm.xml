@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-17 20:24:52 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.std.zdxq.entities.Need" table="SSH_NEED">
+        <id name="n_id" type="java.lang.Integer">
+            <column name="N_ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="user" class="com.std.zdxq.entities.User" fetch="join" lazy="false">
+            <column name="USER_ID" />
+        </many-to-one>
+        <property name="n_name" type="java.lang.String">
+            <column name="N_NAME" />
+        </property>
+        <property name="n_timeMin" type="java.lang.String">
+            <column name="N_TIMEMIN" />
+        </property>
+        <property name="n_timeMax" type="java.lang.String">
+            <column name="N_TIMEMAX" />
+        </property>
+        <property name="n_introduce" type="java.lang.String">
+            <column name="N_INTRODUCE" />
+        </property>
+        <property name="n_problem" type="java.lang.String">
+            <column name="N_PROBLEM" />
+        </property>
+        <property name="n_key" type="java.lang.String">
+            <column name="N_KEY" />
+        </property>
+        <property name="n_target" type="java.lang.String">
+            <column name="N_TARGET" />
+        </property>
+        <property name="n_key1" type="java.lang.String">
+            <column name="N_KEY1" />
+        </property>
+        <property name="n_key2" type="java.lang.String">
+            <column name="N_KEY2" />
+        </property>
+        <property name="n_key3" type="java.lang.String">
+            <column name="N_KEY3" />
+        </property>
+        <property name="n_key4" type="java.lang.String">
+            <column name="N_KEY4" />
+        </property>
+        <property name="n_key5" type="java.lang.String">
+            <column name="N_KEY5" />
+        </property>
+        <property name="n_money" type="java.lang.String">
+            <column name="N_MONEY" />
+        </property>
+        <property name="n_SType" type="java.lang.String">
+            <column name="N_STYPE" />
+        </property>
+        <property name="n_OTarget" type="java.lang.String">
+            <column name="N_OTARGET" />
+        </property>
+        <many-to-one name="xkfl" class="com.std.zdxq.entities.XKFL" fetch="join" lazy="false">
+            <column name="XKFL_ID" />
+        </many-to-one>
+        <many-to-one name="gmjj" class="com.std.zdxq.entities.GMJJ" fetch="join" lazy="false">
+            <column name="GMJJ_ID" />
+        </many-to-one>
+        <property name="yjlx" type="java.lang.String">
+            <column name="YJLX" />
+        </property>
+        <property name="xssh" type="java.lang.String">
+            <column name="XSSH" />
+        </property>
+        <property name="bmsh" type="java.lang.String">
+            <column name="BMSH" />
+        </property>
+        <many-to-one name="bm" class="com.std.zdxq.entities.BM" fetch="join" lazy="false">
+            <column name="BM_ID" />
+        </many-to-one>
+        <property name="xsOpinion" type="java.lang.String">
+            <column name="XSOPINION" />
+        </property>
+        <property name="bmOpinion" type="java.lang.String">
+            <column name="BMOPINION" />
+        </property>
+    </class>
+</hibernate-mapping>

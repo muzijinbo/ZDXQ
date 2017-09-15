@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-17 20:24:52 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.std.zdxq.entities.GMJJ" table="SSH_GMJJ">
+        <id name="gm_id" type="java.lang.String">
+            <column name="GM_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="gm_code1" type="java.lang.String">
+            <column name="GM_CODE1" />
+        </property>
+        <property name="gm_code2" type="java.lang.String">
+            <column name="GM_CODE2" />
+        </property>
+        <property name="gm_code3" type="java.lang.String">
+            <column name="GM_CODE3" />
+        </property>
+        <property name="gm_title" type="java.lang.String">
+            <column name="GM_TITLE" />
+        </property>
+    </class>
+</hibernate-mapping>
